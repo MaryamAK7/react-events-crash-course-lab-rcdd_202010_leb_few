@@ -21,7 +21,7 @@ export default class ChromeBoisDomain extends Component {
    * `toggleCycling` function with no arguments. Don't forget the click event
    * listener that should fire it!
    */
-  const handleClick= (event) => {
+  handleClick= (event) => {
      toggleCycling();
    }
    
@@ -31,11 +31,11 @@ export default class ChromeBoisDomain extends Component {
   /* if the key pressed was 'a', then it should call `resize` with '+'
   /* if the key pressed was 's', then it should call `resize` with '-' 
    */
-  const handleKeyDown = (event) =>{
-    if(event.target.value === "a"){
+ handleKeyDown = (event) =>{
+    if(event.key === "a"){
       resize("+");
     }
-    if(event.target.value === "s"){
+    if(event.key === "s"){
       resize("-");
     }
   }
